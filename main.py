@@ -1,7 +1,9 @@
 import os
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
-
+from dotenv import load_dotenv
+# Загрузка переменных из .env
+load_dotenv()
 # Путь к файлу для сохранения данных
 DATA_FILE = 'output.txt'
 
@@ -34,10 +36,10 @@ def save_user_data(user):
 def main():
     """Основная функция для запуска бота."""
     # Загрузите токен из переменной окружения или config.json
-    token = os.getenv(7805796024:AAHYV5UUhdLyzEKRk6UX5a01mu6sL2DrAtI)
-    if not token:
-        print("Токен не найден. Укажите его в переменной окружения TELEGRAM_BOT_TOKEN.")
-        return
+token = os.getenv("TELEGRAM_BOT_TOKEN")
+if not token:
+    print("Токен не найден. Убедитесь, что он указан в .env.")
+    exit(1)
 
     updater = Updater(token)
     dispatcher = updater.dispatcher
