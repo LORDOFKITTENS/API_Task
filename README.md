@@ -13,5 +13,5 @@
 
 1. **Клонирование репозитория:**
    ```bash
-   git clone https://git.miem.hse.ru/ps-biv24x/API_Task.git
+   git clone https://github.com/LORDOFKITTENS/API_Task.git
    cd API_Task
